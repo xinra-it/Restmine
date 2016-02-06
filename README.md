@@ -1,0 +1,1 @@
+Please refer to https://projects.erikh.de/projects/restmine/wiki

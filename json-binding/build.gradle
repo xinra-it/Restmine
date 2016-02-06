@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+def fullProjectName = 'restmine-json-binding'
+eclipse.project.name = fullProjectName
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Restmine JSON Binding',
+                   'Implementation-Version': version
+    }
+	baseName = fullProjectName
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile project(':api')
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.7.1'
+}

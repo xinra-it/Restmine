@@ -1,0 +1,19 @@
+allprojects {
+	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+	version = '0-ALPHA'
+	
+	eclipse.project {
+		natures 'org.springsource.ide.eclipse.gradle.core.nature'
+	}
+}
+
+subprojects {
+	repositories {
+		mavenCentral()
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.10'
+}

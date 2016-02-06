@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+def fullProjectName = 'restmine-api'
+eclipse.project.name = fullProjectName
+
+jar {
+    manifest {
+        attributes 'Specification-Title': 'Restmine API',
+                   'Specification-Version': version
+    }
+	baseName = fullProjectName
+}

@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+def fullProjectName = 'restmine-spring-impl-android'
+eclipse.project.name = fullProjectName
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Restmine Spring Impl for Android',
+                   'Implementation-Version': version
+    }
+	baseName = fullProjectName
+}
+
+dependencies {
+    compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
+	compile project(':api')
+}
+
+sourceSets {
+	main.java.srcDir project(':spring-impl').sourceSets.main.java
+}

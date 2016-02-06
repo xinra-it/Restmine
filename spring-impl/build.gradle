@@ -1,0 +1,8 @@
+apply plugin: 'java'
+
+def fullProjectName = 'restmine-spring-impl-shared'
+eclipse.project.name = fullProjectName
+
+dependencies {
+	compile project(':api')
+}

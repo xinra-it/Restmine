@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+def fullProjectName = 'restmine-spring-impl'
+eclipse.project.name = fullProjectName
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Restmine Spring Impl',
+                   'Implementation-Version': version
+    }
+	baseName = fullProjectName
+}
+
+dependencies {
+    compile 'org.springframework:spring-web:4.1.4.RELEASE'
+	compile project(':api')
+}
+
+sourceSets {
+	main.java.srcDir project(':spring-impl').sourceSets.main.java
+}

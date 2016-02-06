@@ -1,0 +1,3 @@
+include 'api', 'json-binding', 'spring-impl', 'spring-impl:default', 'spring-impl:android'
+
+rootProject.name = "restmine"
